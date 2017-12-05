@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="match_parent"
+    app:elevation="4dp"
+    app:behavior_hideable="false"
+
+    app:behavior_peekHeight="@dimen/bottom_peek_height"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="wrap_content"
+        android:text="@string/fb_summary"
+        android:textAllCaps="true"
+        android:paddingLeft="5dip"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:textColor="@color/colorPrimary"
+        android:paddingRight="5dip"
+        android:layout_height="wrap_content" />
+
+   <LinearLayout
+       android:id="@+id/recyclerViewLayout"
+       android:layout_width="match_parent"
+       android:layout_height="0dip"
+       android:visibility="gone"
+       android:layout_weight="1">
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recyclerView"
+           android:layout_width="match_parent"
+           android:visibility="gone"
+           android:layout_height="wrap_content">
+       </android.support.v7.widget.RecyclerView>
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aedLayout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="40dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="30dip"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/aed"
+                android:textAllCaps="true"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/totalQty"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="0"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/arrow_indicator"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_action_arrow_top"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:paddingRight="10dip"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/pay"
+                android:textAllCaps="true"
+                android:paddingLeft="2dip"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textColor="@color/colorPrimary"
+                android:paddingRight="2dip"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_action_arrow_right"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
